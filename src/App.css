@@ -1,38 +1,496 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.5.0/css/all.css");
+
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a94da1;
+  border: 2px solid #555555;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #170c2c;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(0deg, #170c2c 88%, #a94da1);
+  background-size: 1px 6px;
+}
+
+.container::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 2;
   pointer-events: none;
+  animation: flicker 0.15s infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  font-family: "Press Start 2P", cursive;
+  font-size: 8px;
+  color: whitesmoke;
+  height: 86px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.box-container {
+  flex-grow: 1;
+  display: flex;
+  width: 100%;
+  padding-top: 10px;
+  justify-content: center;
+}
+
+.box {
+  width: 98%;
+  height: 94%;
+  border-top: 2px solid #a94da1;
+  border-bottom: 2px solid #a94da1;
+  display: flex;
+}
+
+.links {
+  height: 100%;
+  min-width: 13%;
+  border-left: 2px solid #a94da1;
+  border-right: 1px solid #a94da1;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.anchor {
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.anchor-text {
+  font-family: "Press Start 2P";
+  font-size: 0.7vw;
+}
+
+.each-link-container {
+  min-height: 2vw;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: white;
+  padding-left: 10px;
+}
+.each-link-container-alter {
+  min-height: 2vw;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffc63a;
+  color: black;
+  padding-left: 10px;
+  border-radius: 6px 0px 0px 0px;
+  background-image: linear-gradient(0deg, #ffc63a 88%, #170c2c);
+  background-size: 1px 6px;
 }
 
-.App-link {
-  color: #61dafb;
+.each-link-container:hover {
+  background-color: #ffc63a;
+  border-radius: 5px 0px 0px 0px;
+  background-image: linear-gradient(0deg, #ffc63a 88%, #170c2c);
+  background-size: 1px 6px;
+  color: black;
 }
 
-@keyframes App-logo-spin {
+.space {
+  min-height: 40px;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.89551;
+  }
+  5% {
+    opacity: 0.7981;
+  }
+  10% {
+    opacity: 0.61974;
+  }
+  15% {
+    opacity: 0.42912;
+  }
+  20% {
+    opacity: 0.11527;
+  }
+  25% {
+    opacity: 0.78956;
+  }
+  30% {
+    opacity: 0.60846;
+  }
+  35% {
+    opacity: 0.73089;
+  }
+  40% {
+    opacity: 0.94394;
+  }
+  45% {
+    opacity: 0.56685;
+  }
+  50% {
+    opacity: 0.13589;
+  }
+  55% {
+    opacity: 0.76459;
+  }
+  60% {
+    opacity: 0.26182;
+  }
+  65% {
+    opacity: 0.55774;
+  }
+  70% {
+    opacity: 0.32224;
+  }
+  75% {
+    opacity: 0.15709;
+  }
+  80% {
+    opacity: 0.1442;
+  }
+  85% {
+    opacity: 0.24345;
+  }
+  90% {
+    opacity: 0.04462;
+  }
+  95% {
+    opacity: 0.96575;
+  }
+  100% {
+    opacity: 0.3888;
+  }
+}
+
+.actual-content {
+  border-left: 1px solid #a94da1;
+  border-right: 2px solid #a94da1;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.Home-text {
+  font-family: "Press Start 2P", cursive;
+  color: cornsilk;
+  font-size: 0.6vw;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.ascii-art {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 0.8vw;
+  align-items: flex-end;
+  color: #c7d3d4ff;
+  letter-spacing: 0;
+  line-height: 1;
+  height: 40%;
+}
+
+.Home-main-text-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Home-main-text {
+  font-family: "Press Start 2P";
+  font-size: 1.2vw;
+  color: wheat;
+  letter-spacing: 3px;
+}
+
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: type 1.3s steps(25, end);
+}
+
+.t {
+  min-height: fit-content;
+}
+
+.t h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: type 1.3s steps(40, end) infinite;
+  animation-delay: 0ms;
+}
+.cursor {
+  animation: blink 0.75s step-end infinite;
+}
+
+.about-main-container {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.about-content-container {
+  display: flex;
+  flex-grow: 1;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+.about-text {
+  font-family: "Press Start 2P", cursive;
+  color: cornsilk;
+  font-size: 0.8vw;
+  letter-spacing: 4px;
+  padding-left: 10px;
+  padding-top: 10px;
+  min-height: fit-content;
+}
+
+.ascii-art-top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 0.6vw;
+  padding-bottom: 30px;
+  align-items: flex-start;
+  color: #c7d3d4ff;
+  letter-spacing: 0;
+  line-height: 1;
+  height: fit-content;
+}
+
+.about-page-para {
+  font-family: "Press Start 2P";
+  color: wheat;
+  width: 60%;
+}
+
+.about-page-para p {
+  letter-spacing: 3px;
+  padding-left: 4%;
+  font-size: 0.69vw;
+}
+
+.skill-text {
+  font-family: "Press Start 2P", cursive;
+  color: cornsilk;
+  font-size: 0.9vw;
+  text-decoration: underline;
+  letter-spacing: 4px;
+  padding: 10px 10px;
+  letter-spacing: 5px;
+}
+
+.skill-list {
+  font-family: "Press Start 2P";
+  color: wheat;
+  padding-left: 30px;
+  font-size: 0.76vw;
+  list-style-type: none;
+}
+
+.skill-list li::before {
+  content: "⇒";
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  color: #a94da1;
+  margin-left: -1em;
+  padding-right: 10px;
+}
+
+.skill-list > * {
+  display: list-item;
+  width: 33%;
+  float: left;
+}
+
+.skill-list li {
+  padding: 10px;
+}
+
+.contact-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.contact-page-para {
+  font-family: "Press Start 2P";
+  color: wheat;
+  width: 60%;
+  font-size: 0.84vw;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.mail-anchor {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+@keyframes type {
   from {
-    transform: rotate(0deg);
+    width: 0;
   }
   to {
-    transform: rotate(360deg);
+    width: 100%;
   }
+}
+
+@keyframes blink {
+  from,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 100%;
+  }
+}
+
+.contact-links-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.contact-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 15%;
+  min-height: 4vh;
+  border-radius: 4.5px 4.5px 0px 0px;
+  border-bottom: 2px solid #a94da1;
+}
+
+.contact-link:hover {
+  background-color: rgba(169, 77, 161, 0.3);
+}
+
+.contact-link a {
+  display: inherit;
+  width: 100%;
+  height: 100%;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-link i {
+  font-size: 0.9vw;
+  padding: 0px 10px;
+}
+
+.contact-link h1 {
+  font-family: "Press Start 2P";
+  font-size: 0.9vw;
+}
+
+.projects-window {
+  width: 100%;
+  border-top: 1px dashed #a94da1;
+  overflow-y: scroll;
+  flex-grow: 1;
+  min-height: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 200px;
+}
+
+.Loading {
+  display: flex;
+  width: 100%;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8vw;
+}
+.Loading h2 {
+  font-family: "Press Start 2P";
+  color: wheat;
+}
+
+.Loading h1 {
+  font-family: "Press Start 2P";
+  color: wheat;
+}
+
+.each-project {
+  color: wheat;
+  font-family: "Press Start 2P";
+  background-color: transparent;
+  min-width: 50%;
+  max-width: 50%;
+  padding-top: 20px;
+  position: relative;
+  text-overflow: ellipsis;
+  font-size: 0.8vw;
+  padding: 20px;
+}
+
+.project-link {
+  text-decoration: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+.project-link:hover {
+  background-color: #ffc63a;
+  color: black;
+}
+
+.project-link > * {
+  background-color: inherit;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+.each-project sub {
+  color: inherit;
+  font-size: 75%;
+  padding-bottom: 5px;
 }
