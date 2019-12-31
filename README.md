@@ -1,1 +1,1 @@
-#The frontend of my new personal website made with React
+# The frontend of my new personal website made with React
