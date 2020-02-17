@@ -7,7 +7,7 @@ const Home = () => {
   const [path, Setpath] = useContext(pathContext);
   useEffect(() => {
     Setpath("/");
-  }, []);
+  });
 
   const getAscii = () => {
     let ascii = [

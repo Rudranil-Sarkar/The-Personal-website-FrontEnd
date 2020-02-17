@@ -38,7 +38,7 @@ const About = () => {
             /* Hello! I am a self-taught programmer,
             <br />
             <br /> I was never the best academically in school but
-            <br /> awfully curious nature kept me going,
+            <br /> my awfully curious nature kept me going,
             <br />
             <br /> I love to solve problems and learn new things by practically
             using them. <br />

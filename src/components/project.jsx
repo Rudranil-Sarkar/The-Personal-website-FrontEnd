@@ -89,7 +89,7 @@ const Project = () => {
         </div>
         <div className="contact-page-para">
           <p>
-            #These are my software repositries on github and other projects I
+            #These are my software repositories on github and other projects I
             have worked on
             <br />
             <br />
