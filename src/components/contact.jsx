@@ -18,7 +18,7 @@ const Contact = () => {
       "██║     ██║   ██║██╔██╗ ██║   ██║   ███████║██║        ██║       ██╔████╔██║█████╗  ",
       "██║     ██║   ██║██║╚██╗██║   ██║   ██╔══██║██║        ██║       ██║╚██╔╝██║██╔══╝  ",
       "╚██████╗╚██████╔╝██║ ╚████║   ██║   ██║  ██║╚██████╗   ██║       ██║ ╚═╝ ██║███████╗",
-      " ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝   ╚═╝       ╚═╝     ╚═╝╚══════╝"
+      " ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝   ╚═╝       ╚═╝     ╚═╝╚══════╝",
     ].join("\n");
     return ascii;
   };
@@ -67,9 +67,9 @@ const Contact = () => {
           Icon="fab fa-twitter"
         />
         <ContactLink
-          Name="FACEBOOK @"
-          to="https://www.facebook.com/Wolfattackx"
-          Icon="fab fa-facebook-square"
+          Name="LINKEDIN @"
+          to="https://www.linkedin.com/in/rudranil-sarkar-150744159/"
+          Icon="fab fa-linkedin"
         />
       </div>
     </div>

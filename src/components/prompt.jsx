@@ -4,7 +4,7 @@ import { pathContext } from "./pathContext";
 import "../App.css";
 
 const Prompt = () => {
-  const [path, SetPath] = useContext(pathContext);
+  const [path, Setpath] = useContext(pathContext);
   return (
     <div className="header">
       <h1>{`~/USER/PORTFOLIO/RUDRANIL${path === "/" ? "" : path}:`}</h1>

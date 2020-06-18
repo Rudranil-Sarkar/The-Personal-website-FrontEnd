@@ -23,18 +23,20 @@ const EachProject = ({ prj }) => {
   return (
     <>
       <div className="each-project">
-        <a
-          href={prj.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-link"
-        >
-          <p>
-            {prj.name} <br />
-            <br />
-            <sub>{prj.description}</sub>
-          </p>
-        </a>
+        <div className="each-project-container">
+          <a
+            href={prj.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-link"
+          >
+            <p>
+              {prj.name} <br />
+              <br />
+              <sub>{prj.description}</sub>
+            </p>
+          </a>
+        </div>
       </div>
     </>
   );
@@ -48,10 +50,10 @@ const Project = () => {
   const fetchProjects = () => {
     Setloading(true);
     fetch("/api/getdata/")
-      .then(res => {
+      .then((res) => {
         return res.json();
       })
-      .then(json => {
+      .then((json) => {
         Setloading(false);
         Setprojects(json);
       });
@@ -71,7 +73,7 @@ const Project = () => {
       "██████╔╝██████╔╝██║   ██║     ██║█████╗  ██║        ██║   ███████╗",
       "██╔═══╝ ██╔══██╗██║   ██║██   ██║██╔══╝  ██║        ██║   ╚════██║",
       "██║     ██║  ██║╚██████╔╝╚█████╔╝███████╗╚██████╗   ██║   ███████║",
-      "╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚════╝ ╚══════╝ ╚═════╝   ╚═╝   ╚══════╝"
+      "╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚════╝ ╚══════╝ ╚═════╝   ╚═╝   ╚══════╝",
     ].join("\n");
 
     return ascii;
@@ -89,7 +91,7 @@ const Project = () => {
         </div>
         <div className="contact-page-para">
           <p>
-            #These are my software repositries on github and other projects I
+            #These are my software repositories on github and other projects I
             have worked on
             <br />
             <br />
@@ -102,7 +104,7 @@ const Project = () => {
           {loading ? (
             <Loading />
           ) : (
-            projects.map(p => {
+            projects.map((p) => {
               return <EachProject key={p.id} prj={p} />;
             })
           )}
