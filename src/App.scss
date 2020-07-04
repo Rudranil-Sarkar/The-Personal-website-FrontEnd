@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.5.0/css/all.css");
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 
 * {
   padding: 0;
@@ -9,6 +10,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scrollbar-color: #a94da1 rgba(0, 0, 0, 0.4);
+}
+code {
+  font-family: "Courier New", Courier, monospace;
+
 }
 
 ::-webkit-scrollbar-track {
@@ -507,6 +512,9 @@
     font-size: 4.6px;
     height: 43px;
     padding-left: 15px;
+  }
+  code {
+    font-family: 'Major Mono Display', monospace;
   }
 
   .box {
